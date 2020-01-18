@@ -1,3 +1,4 @@
+package cycleapp;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -14,7 +15,7 @@ public class CurrentDate {
         month = Integer.parseInt(JOptionPane.showInputDialog(null, "What is the current month? (Format: M or MM)"));
        // year = Integer.parseInt(JOptionPane.showInputDialog(null, "What is the current year? (Format: YYYY)"));
 
-        //System.out.println(convertDatetoDay(month, day));
+        System.out.println(convertDatetoDay(month, day));
         System.out.println(convertDaytoDate(36));
        
     }
