@@ -1,15 +1,14 @@
 import java.awt.event.*;
 import java.awt.*;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.io.*;
+
 
 
 public class MainMenu extends JFrame implements ActionListener 
 {
 	// creating and declaring private JComponents
-    private final JButton btnExit, btnPlus, btnHelp, btnSettings, btnPrompts;
+    private final JButton btnExit, btnPlus, btnHelp, btnSettings, btnPrompts, btnAnalytics;
     private final Container frame;
 
 	// default constructor
@@ -49,12 +48,12 @@ public class MainMenu extends JFrame implements ActionListener
 		frame.setLayout (null);
 		setResizable (false);
 
-		final Color color1 = new Color(198, 43, 43); 
-		final Color color2 = new Color(237, 144, 45); 
-		final Color color3 = new Color(242, 223, 84); 
-		final Color color4 = new Color(192, 211, 82); 
-		final Color color5 = new Color(129, 183, 49); 
-        final Color testColor = new Color(198, 43, 43);
+		//final Color color1 = new Color(198, 43, 43); 
+		//final Color color2 = new Color(237, 144, 45); 
+		//final Color color3 = new Color(242, 223, 84); 
+	//	final Color color4 = new Color(192, 211, 82); 
+	//	final Color color5 = new Color(129, 183, 49); 
+      //  final Color testColor = new Color(198, 43, 43);
 		
 		// creating the button and setting bounds for the exit button
         btnExit = new JButton(new ImageIcon("Images/close-button.png"));
@@ -100,12 +99,22 @@ public class MainMenu extends JFrame implements ActionListener
         btnPlus = new JButton(new ImageIcon("Images/plus-button.png"));
         btnPlus.setToolTipText("View Calender");
         btnPlus.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnPlus.setBounds(220, 650, 60, 60);
+		btnPlus.setBounds(150, 650, 60, 60);
         getContentPane().add(btnPlus);
 
         btnPlus.setOpaque(false);
         btnPlus.setContentAreaFilled(false);
-        btnPlus.setBorderPainted(false);
+		btnPlus.setBorderPainted(false);
+		
+		btnAnalytics = new JButton(new ImageIcon("Images/graph-button.png"));
+        btnAnalytics.setToolTipText("View Analytics");
+        btnAnalytics.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
+		btnAnalytics.setBounds(270, 650, 60, 60);
+        getContentPane().add(btnAnalytics);
+
+        btnAnalytics.setOpaque(false);
+        btnAnalytics.setContentAreaFilled(false);
+        btnAnalytics.setBorderPainted(false);
 
 		// Display in the centre
 		final Dimension dim = Toolkit.getDefaultToolkit ().getScreenSize ();
@@ -115,7 +124,8 @@ public class MainMenu extends JFrame implements ActionListener
         btnHelp.addActionListener(this);
         btnSettings.addActionListener(this);
         btnPlus.addActionListener(this);
-        btnPrompts.addActionListener(this);
+		btnPrompts.addActionListener(this);
+		btnAnalytics.addActionListener(this);
 		
 		// setting the frame visible to the user
 		setVisible(true);
@@ -139,7 +149,28 @@ public class MainMenu extends JFrame implements ActionListener
 			System.out.println("Prompts button pressed");
 
 			new PromptsOne();
-        }
+		}
+		
+		if (e.getSource() == btnAnalytics)
+		{
+			System.out.println("Analytics button pressed");
+			new Analytics();
+		}
+		if (e.getSource() == btnHelp) 
+		{
+			System.out.println("Help button pressed");
+			new HelpMenu();
+		}
+		if (e.getSource() == btnSettings) 
+		{
+			System.out.println("Settings button pressed");
+			new SettingsMenu();
+		}
+		if (e.getSource() == btnPlus) 
+		{
+			System.out.println("Calender button pressed");
+			new Calender();
+		}
        
 		
 	}

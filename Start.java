@@ -47,23 +47,30 @@ public class Start extends JFrame implements ActionListener
 		frame.setLayout (null);
 		setResizable (false);
 
-		Color testColor = new Color(198, 43, 43); 
+	//	Color testColor = new Color(198, 43, 43); 
 		
 		// creating the button and setting bounds for the play button
-		btnStart = new JButton("Start");
+		btnStart = new JButton(new ImageIcon("Images/start-screen-button.png"));
 		btnStart.setToolTipText("Click to Start Application");
 		btnStart.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20));
-		btnStart.setBounds(30, 600, 100, 100);
+		btnStart.setBounds(300, 620, 100, 100);
 		getContentPane().add(btnStart);
 
+		btnStart.setOpaque(false);
+        btnStart.setContentAreaFilled(false);
+        btnStart.setBorderPainted(false);
 	
 
 		// creating the button and setting bounds for the exit button
-		btnExit = new JButton("Exit");
+		btnExit = new JButton(new ImageIcon("Images/exit-start-screen-button.png"));
 		btnExit.setToolTipText("Exit");
 		btnExit.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnExit.setBounds(300, 600, 100, 100);
+		btnExit.setBounds(90, 620, 100, 100);
 		getContentPane().add(btnExit);
+
+		btnExit.setOpaque(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setBorderPainted(false);
 
 		// Display in the centre
 		Dimension dim = Toolkit.getDefaultToolkit ().getScreenSize ();

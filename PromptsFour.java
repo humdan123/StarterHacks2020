@@ -52,7 +52,7 @@ public class PromptsFour extends JFrame implements ActionListener
 		final Color color3 = new Color(242, 223, 84); 
 		final Color color4 = new Color(192, 211, 82); 
 		final Color color5 = new Color(129, 183, 49); 
-		final Color testColor = new Color(198, 43, 43);
+	//	final Color testColor = new Color(198, 43, 43);
 		
 		btn1 = new JButton("1");
         btn1.setBackground(color1);
@@ -90,18 +90,26 @@ public class PromptsFour extends JFrame implements ActionListener
         getContentPane().add(btn5);
 		
 		// creating the button and setting bounds for the exit button
-        btnExit = new JButton("Exit");
+        btnExit = new JButton(new ImageIcon("Images/black-close-button.png"));
 		btnExit.setToolTipText("Exit");
 		btnExit.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnExit.setBounds(280, 650, 150, 60);
-        getContentPane().add(btnExit);
+		btnExit.setBounds(370, 650, 80, 80);
+		getContentPane().add(btnExit);
+		
+		btnExit.setOpaque(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setBorderPainted(false);
         
-        btnBack = new JButton("Back");
+        btnBack = new JButton(new ImageIcon("Images/black-back-button.png"));
 		btnBack.setToolTipText("Back to Main Menu");
 		btnBack.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnBack.setBounds(80, 650, 150, 60);
+		btnBack.setBounds(40, 650, 80, 80);
 		getContentPane().add(btnBack);
 
+		btnBack.setOpaque(false);
+        btnBack.setContentAreaFilled(false);
+        btnBack.setBorderPainted(false);
+		
 		// Display in the centre
 		final Dimension dim = Toolkit.getDefaultToolkit ().getScreenSize ();
 		this.setLocation (dim.width / 2 - this.getSize ().width / 2, dim.height / 2 - this.getSize ().height / 2);

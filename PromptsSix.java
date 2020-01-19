@@ -7,7 +7,7 @@ public class PromptsSix extends JFrame implements ActionListener
 {
 	// creating and declaring private JComponents
     private final JButton btnExit, btnBack;
-    private JButton btn1, btn2, btn3, btn4, btn5;
+    private JButton  btn2, btn3, btn4;
     private final Container frame;
 
 	// default constructor
@@ -48,11 +48,11 @@ public class PromptsSix extends JFrame implements ActionListener
 		setResizable (false);
 
 		final Color color1 = new Color(198, 43, 43); 
-		final Color color2 = new Color(237, 144, 45); 
+	//	final Color color2 = new Color(237, 144, 45); 
 		final Color color3 = new Color(242, 223, 84); 
-		final Color color4 = new Color(192, 211, 82); 
+	//	final Color color4 = new Color(192, 211, 82); 
 		final Color color5 = new Color(129, 183, 49); 
-		final Color testColor = new Color(198, 43, 43);
+	//	final Color testColor = new Color(198, 43, 43);
 		
 		btn2 = new JButton("Yes");
         btn2.setBackground(color5);
@@ -75,20 +75,26 @@ public class PromptsSix extends JFrame implements ActionListener
 		btn4.setBounds(300, 420, 100, 50);
 		getContentPane().add(btn4);
 		
-		
-		
 		// creating the button and setting bounds for the exit button
-        btnExit = new JButton("Exit");
+        btnExit = new JButton(new ImageIcon("Images/black-close-button.png"));
 		btnExit.setToolTipText("Exit");
 		btnExit.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnExit.setBounds(280, 650, 150, 60);
-        getContentPane().add(btnExit);
+		btnExit.setBounds(370, 650, 80, 80);
+		getContentPane().add(btnExit);
+		
+		btnExit.setOpaque(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setBorderPainted(false);
         
-        btnBack = new JButton("Back");
+        btnBack = new JButton(new ImageIcon("Images/black-back-button.png"));
 		btnBack.setToolTipText("Back to Main Menu");
 		btnBack.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnBack.setBounds(80, 650, 150, 60);
+		btnBack.setBounds(40, 650, 80, 80);
 		getContentPane().add(btnBack);
+
+		btnBack.setOpaque(false);
+        btnBack.setContentAreaFilled(false);
+        btnBack.setBorderPainted(false);
 
 		// Display in the centre
 		final Dimension dim = Toolkit.getDefaultToolkit ().getScreenSize ();
@@ -122,19 +128,19 @@ public class PromptsSix extends JFrame implements ActionListener
 		if (e.getSource() == btn2)
 		{
 			System.out.println("Button 2 pressed");
-			new MainMenu();
+			new Analytics();
 
 		}
 		if (e.getSource() == btn3)
 		{
 			System.out.println("Button 3 pressed");
-			new MainMenu();
+			new Analytics();
 
 		}
 		if (e.getSource() == btn4)
 		{
 			System.out.println("Button 4 pressed");
-			new MainMenu();
+			new Analytics(); 
 
 		}
 		if(e.getSource() == btnBack) 
