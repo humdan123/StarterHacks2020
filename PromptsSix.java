@@ -118,36 +118,30 @@ public class PromptsSix extends JFrame implements ActionListener
 			// exit the program
 			System.exit(0);
 		}
-		if (e.getSource() == btn1)
-		{
-			System.out.println("Button 1 pressed");
-		//	new MainMenu();
-
-		}
+		
 		if (e.getSource() == btn2)
 		{
 			System.out.println("Button 2 pressed");
-			//new MainMenu();
+			new MainMenu();
 
 		}
 		if (e.getSource() == btn3)
 		{
 			System.out.println("Button 3 pressed");
-			//new MainMenu();
+			new MainMenu();
 
 		}
 		if (e.getSource() == btn4)
 		{
 			System.out.println("Button 4 pressed");
-			//new MainMenu();
+			new MainMenu();
 
 		}
-		if (e.getSource() == btn5)
+		if(e.getSource() == btnBack) 
 		{
-			System.out.println("Button 5 pressed");
-			//new MainMenu();
-
-        }
+			System.out.println("Back button pressed");
+			new PromptsFive();
+		}
 	}
 
 	// self testing main method

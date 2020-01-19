@@ -51,10 +51,9 @@ public class Start extends JFrame implements ActionListener
 		
 		// creating the button and setting bounds for the play button
 		btnStart = new JButton("Start");
-	    btnStart.setBackground(testColor);
 		btnStart.setToolTipText("Click to Start Application");
 		btnStart.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20));
-		btnStart.setBounds(30, 600, 150, 60);
+		btnStart.setBounds(30, 600, 100, 100);
 		getContentPane().add(btnStart);
 
 	
@@ -63,7 +62,7 @@ public class Start extends JFrame implements ActionListener
 		btnExit = new JButton("Exit");
 		btnExit.setToolTipText("Exit");
 		btnExit.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
-		btnExit.setBounds(300, 600, 150, 60);
+		btnExit.setBounds(300, 600, 100, 100);
 		getContentPane().add(btnExit);
 
 		// Display in the centre
@@ -73,14 +72,6 @@ public class Start extends JFrame implements ActionListener
 		
 		btnExit.addActionListener(this);
 		btnStart.addActionListener(this);
-
-		// setting up the picture for the start screen
-        //Picture p = new Picture (10, 10, new ImageIcon("Images/start-screen.jpg"));
-        
-      //  ImageIcon p = new ImageIcon("Images/start-screen.jpg");
-	//	p.setLocation(-11, -12);
-	//	p.setSize(500, 786);
-	//	getContentPane().add(p);
 		
 		// setting the frame visible to the user
 		setVisible(true);
@@ -111,6 +102,8 @@ public class Start extends JFrame implements ActionListener
 			// exit the program
 			System.exit(0);
 		}
+
+
 	}
 
 	// self testing main method

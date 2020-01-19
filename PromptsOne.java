@@ -100,6 +100,7 @@ public class PromptsOne extends JFrame implements ActionListener
 		btn2.addActionListener(this);
 		btn3.addActionListener(this);
 		btn4.addActionListener(this);	
+		
 
 		
 		// setting the frame visible to the user
@@ -147,7 +148,12 @@ public class PromptsOne extends JFrame implements ActionListener
 			System.out.println("Button 5 pressed");
 			new PromptsTwo();
 
-        }
+		}
+		if(e.getSource() == btnBack) 
+		{
+			System.out.println("Back button pressed");
+			new MainMenu();
+		}
 	}
 
 	// self testing main method

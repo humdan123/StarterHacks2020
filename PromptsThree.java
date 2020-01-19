@@ -160,7 +160,12 @@ public class PromptsThree extends JFrame implements ActionListener
 			System.out.println("Button 5 pressed");
 			new PromptsFour();
 
-        }
+		}
+		if(e.getSource() == btnBack) 
+		{
+			System.out.println("Back button pressed");
+			new PromptsTwo();
+		}
 	}
 
 	// self testing main method
