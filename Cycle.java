@@ -17,9 +17,9 @@ public class Cycle {
 
     public int calculateMean() { 
         int sum = 0;
-        for(int i=0; i < 12; i++) {
+        for(int i = 0; i < 13; i++) {
             sum += this.yearCycle[i];
         }
-        return Math.round(sum / 12);
+        return (Math.round(sum / 12));
     }
 }
