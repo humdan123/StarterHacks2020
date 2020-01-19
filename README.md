@@ -3,6 +3,8 @@
 
 A menstrual health tracker made with privacy, cleaner and simpler UI in mind.
 
+# TO RUN:
+Run the Start.class file via command "java Start"
 
 # Current GUI Look:
 Start Screen:
