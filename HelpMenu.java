@@ -7,7 +7,6 @@ public class HelpMenu extends JFrame implements ActionListener
 {
 	// creating and declaring private JComponents
     private final JButton btnBack;
-    private JButton btn1, btn2, btn3, btn4, btn5;
     private final Container frame;
 
 	// default constructor
@@ -47,10 +46,6 @@ public class HelpMenu extends JFrame implements ActionListener
 		frame.setLayout (null);
 		setResizable (false);
 
-		final Color color1 = new Color(198, 43, 43); 
-		final Color color3 = new Color(242, 223, 84); 
-		final Color color5 = new Color(129, 183, 49);
-		
     
         btnBack = new JButton(new ImageIcon("Images/back-button.png"));
 		btnBack.setToolTipText("Back to Main Menu");

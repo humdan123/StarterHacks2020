@@ -148,7 +148,7 @@ public class MainMenu extends JFrame implements ActionListener
 		{
 			System.out.println("Prompts button pressed");
 
-			new PromptsOne();
+			new Prompts();
 		}
 		
 		if (e.getSource() == btnAnalytics)

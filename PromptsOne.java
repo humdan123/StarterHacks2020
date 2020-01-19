@@ -160,7 +160,7 @@ public class PromptsOne extends JFrame implements ActionListener
 		if(e.getSource() == btnBack) 
 		{
 			System.out.println("Back button pressed");
-			new MainMenu();
+			new Prompts();
 		}
 	}
 

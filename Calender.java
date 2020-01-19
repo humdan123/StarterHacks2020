@@ -45,12 +45,7 @@ public class Calender extends JFrame implements ActionListener
 		setUndecorated (true);
 		frame.setLayout (null);
 		setResizable (false);
-
-		final Color color1 = new Color(198, 43, 43); 
-		final Color color3 = new Color(242, 223, 84); 
-		final Color color5 = new Color(129, 183, 49);
 		
-    
         btnBack = new JButton(new ImageIcon("Images/back-button.png"));
 		btnBack.setToolTipText("Back to Main Menu");
 		btnBack.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20)); 
