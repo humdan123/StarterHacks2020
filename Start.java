@@ -1,7 +1,4 @@
 import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.awt.*;
 import javax.swing.*;
 
@@ -9,14 +6,9 @@ import javax.swing.*;
 public class Start extends JFrame implements ActionListener 
 {
 	// creating and declaring private JComponents
-	private JTextArea output;
 	private JButton btnStart, btnExit;
 	private Container frame;
-	
-	// declaring and creating private variables
-	static boolean check;
-	static String file;
-	private String fileName;
+
 
 	// default constructor
 	public Start() 
@@ -54,9 +46,12 @@ public class Start extends JFrame implements ActionListener
 		setUndecorated (true);
 		frame.setLayout (null);
 		setResizable (false);
+
+		Color testColor = new Color(198, 43, 43); 
 		
 		// creating the button and setting bounds for the play button
 		btnStart = new JButton("Start");
+	    btnStart.setBackground(testColor);
 		btnStart.setToolTipText("Click to Start Application");
 		btnStart.setFont(new Font("Lucida Blackletter", Font.PLAIN, 20));
 		btnStart.setBounds(30, 600, 150, 60);
@@ -104,7 +99,7 @@ public class Start extends JFrame implements ActionListener
 			dispose();
 			
 			// open the Game Options window
-			//new GameOptionGUI ();
+			new MainMenu();
 		}
 		
 	
